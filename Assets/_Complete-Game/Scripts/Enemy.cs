@@ -46,7 +46,7 @@ public class Enemy : MovingObject
             //el transform indica la posició de l'objecte (es jeràrquic, te un parent, ell es child)
             yDir = target.position.y > transform.position.y ? 1 : -1;
 
-        else
+        else if (xdif > float.Epsilon)
             xDir = target.position.x > transform.position.x ? 1 : -1;
 
         //comprova si el jugador i ell estan a la mateixa col, si ho estan mira si esta per sobre o per sota i es mou cap a ell. Si no estan a la mateixa col es mou cap a una col mes aprop d'ell.
